@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="false"/>
+
+        <service id="Igoooor\ApiGeneratorBundle\Command\GenerateCrudCommand"/>
+        <service id="Igoooor\ApiGeneratorBundle\Command\GenerateEventCommand"/>
+
+
+        <service id="Igoooor\ApiGeneratorBundle\Generator\CrudGenerator"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\CrudEventGenerator"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\Configuration\Configuration"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\Configuration\ConfigureController"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\Configuration\ConfigureCrud"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\Configuration\ConfigureCrudEvent"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\Configuration\ConfigureEntity"/>
+        <service id="Igoooor\ApiGeneratorBundle\Generator\Configuration\ConfigureBundle">
+            <argument key="$projectDir">%kernel.project_dir%</argument>
+        </service>
+    </services>
+
+</container>

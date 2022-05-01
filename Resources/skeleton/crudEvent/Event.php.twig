@@ -1,0 +1,41 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: api-generator-bundle
+ * Date: {{ "now"|date('d.m.Y') }}
+ * Time: {{ "now"|date('H:i') }}
+ */
+
+namespace {{ bundleName }}Event\{{ entityName }};
+
+use {{ entityFqcn }};
+use Igoooor\ApiBundle\Event\AbstractCrudEvent;
+
+/**
+ * Class {{ eventName }}
+ */
+class {{ eventName }} extends AbstractCrudEvent
+{
+    /**
+     * @var {{ entityName }}
+     */
+    private {{ entityName }} ${{ entityNameCamelcase }};
+
+    /**
+     * {{ eventName }} constructor.
+     *
+     * @param {{ entityName }} ${{ entityNameCamelcase }}
+     */
+    public function __construct({{ entityName }} ${{ entityNameCamelcase }})
+    {
+        $this->{{ entityNameCamelcase }} = ${{ entityNameCamelcase }};
+    }
+
+    /**
+     * @return {{ entityName }}
+     */
+    public function get{{ entityName }}(): {{ entityName }}
+    {
+        return $this->{{ entityNameCamelcase }};
+    }
+}

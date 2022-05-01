@@ -1,0 +1,17 @@
+{
+    "name": "igoooor/api-generator-bundle",
+    "description": "API Components Generator",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "doctrine/annotations": "*",
+        "igoooor/api-bundle": "^3.0",
+        "symfony/framework-bundle": "^4.3|^5.2",
+        "symfony/console": "^4.3|^5.2",
+        "symfony/twig-pack": "*"
+    },
+    "autoload": {
+        "psr-4": { "Igoooor\\ApiGeneratorBundle\\": "" },
+        "exclude-from-classmap": ["/Tests/"]
+    }
+}

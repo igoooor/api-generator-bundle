@@ -1,0 +1,36 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: api-generator-bundle
+ * Date: {{ "now"|date('d.m.Y') }}
+ * Time: {{ "now"|date('H:i') }}
+ */
+
+namespace {{ bundleName }}Listener\{{ entityName }};
+
+use {{ bundleName }}Event\{{ entityName }}\{{ entityName }}{{ eventType }};
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+/**
+ * Class {{ listenerName }}Subscriber
+ */
+class {{ listenerName }}Subscriber implements EventSubscriberInterface
+{
+    /**
+     * @return array
+     */
+    public static function getSubscribedEvents()
+    {
+        return [
+            {{ entityName }}{{ eventType }}::class => 'on{{ listenerName }}',
+        ];
+    }
+
+    /**
+     * @param {{ entityName }}{{ eventType }} $event
+     */
+    public function on{{ listenerName }}({{ entityName }}{{ eventType }} $event): void
+    {
+        ${{ entityNameCamelcase }} = $event->get{{ entityName }}();
+    }
+}
