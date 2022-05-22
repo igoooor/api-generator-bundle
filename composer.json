@@ -6,8 +6,8 @@
     "require": {
         "doctrine/annotations": "*",
         "igoooor/api-bundle": "^1.0",
-        "symfony/framework-bundle": "^4.3|^5.2",
-        "symfony/console": "^4.3|^5.2",
+        "symfony/framework-bundle": "^4.3|^5.2|^6.0",
+        "symfony/console": "^4.3|^5.2|^6.0",
         "symfony/twig-pack": "*"
     },
     "autoload": {
